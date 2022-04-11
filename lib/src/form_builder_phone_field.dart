@@ -61,7 +61,7 @@ class FormBuilderPhoneField extends FormBuilderField<String> {
     String? initialValue,
     InputDecoration decoration = const InputDecoration(),
     ValueChanged<String?>? onChanged,
-    ValueTransformer<String>? valueTransformer,
+    ValueTransformer<String?>? valueTransformer,
     bool enabled = true,
     FormFieldSetter<String>? onSaved,
     AutovalidateMode autovalidateMode = AutovalidateMode.disabled,
@@ -274,7 +274,7 @@ class _FormBuilderPhoneFieldState
         return CountryPickerCupertino(
           pickerSheetHeight: widget.cupertinoPickerSheetHeight ?? 300.0,
           onValuePicked: (Country country) {
-            effectiveFocusNode!.requestFocus();
+            effectiveFocusNode.requestFocus();
             setState(() => _selectedDialogCountry = country);
             didChange(fullNumber);
           },
