@@ -44,10 +44,10 @@ class MyHomePage extends StatelessWidget {
                 ),
                 // onChanged: _onChanged,
                 priorityListByIsoCode: ['KE'],
-                validator: FormBuilderValidators.compose([
-                  FormBuilderValidators.numeric(context),
-                  FormBuilderValidators.required(context),
-                ]),
+                // validator: FormBuilderValidators.compose([
+                //   FormBuilderValidators.numeric(context),
+                //   FormBuilderValidators.required(context),
+                // ]),
               ),
               const SizedBox(height: 15),
               ElevatedButton(
